@@ -8,8 +8,24 @@
   </head>
   <body>
     <div class="container">
-      <button type="submit" class="btn">Submit</button>
-      <div class="popup"></div>
+      <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+      <div class="popup" id="popup">
+        <img src="./img/tick.png" />
+        <h2>Thank you!</h2>
+        <p>Your detailes have been successfully submitted. thank you!</p>
+        <button type="button" onclick="closePopup()">OK</button>
+      </div>
     </div>
+    <script>
+      let popup = document.getElementById('popup');
+      function openPopup() {
+        popup.classList.add('open-popup');
+      }
+      function closePopup() {
+        popup.classList.remove('open-popup');
+        // popup.classList.add('fade-out');
+        // setInterval(popup.classList.remove('open-popup'), 10000);
+      }
+    </script>
   </body>
 </html>
